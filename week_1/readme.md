@@ -5,3 +5,6 @@ like this:
 
 # 1.js:
 ## code
+
+to run the particular file, in terminal type:
+node file_name
