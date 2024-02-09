@@ -5,3 +5,7 @@ The concered subfolder contains respective code along with it's own documentatio
 also note that the files also contains some important things too
 
 Hope to commit more and everyday in this repo
+
+2 Parts of Cohort:
+0-1 December to March
+1-100 March to May
