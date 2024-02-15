@@ -14,13 +14,17 @@
   <button onclick="getAnimals()">get animals</button>
   <script>
     function getAnimals() {
-      fetch("https://fakerapi.it/api/v1/persons")
-        .then(async function(response) {
-          const jsonData = await response.json();
-          document.getElementById("container").innerHTML = JSON.stringify(jsonData.data);
+      alert("Sample msg")
+
+      const response1=
+      fetch("https://fakerapi.it/api/v1/persons") //fetch- to call the response
+        .then(function(response) {
+          response.json()
+          .then(function(finalData){
+            console.log(finalData);
+          })
         })
     }
-    
   </script>
 </body>
 
