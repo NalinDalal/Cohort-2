@@ -5,7 +5,7 @@ const jwtPassword = "123456";
 
 /* To connect this server to a mongodb server or we can say to mongodb database we use below code*/
 // mongoose.connect(
-//   "mongodb+srv://nalindalal2004:UadTCDWYJcYXeN39@cluster0.5xetpfa.mongodb.net/",
+//   "mongodb+srv://username:pwd@databsename.mongodb.net/",
 // );
 
 const User = mongoose.model("User", {
