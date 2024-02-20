@@ -25,4 +25,14 @@ They use something known as zod for better input validation just like 3.final_1.
 
 # DataBases & Auth:
 u know to store the stuff too
-from 7.js or whatever
+from 7.js or whatever,we did that part to successfully,with it's own documentation
+7,8,9.js
+
+# MiddleWares
+Middlewares-function having access to request objects
+10.js
+11.js-middleware used
+
+## 12.js-try and catch
+
+## 13.html-DOM
