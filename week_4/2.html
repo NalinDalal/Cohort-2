@@ -1,0 +1,27 @@
+<html>
+    <script>
+    function populateDiv(){
+        const a=document.getElementById("firstNumber").value;
+        const b=document.getElementById("secondNumber").value;
+    //     const element1=document.getElementById("finalSum");
+    //     element1.innerHTML=a+b;
+    //     element1.innerHTML=parseInt(a)+parseInt(b); //put certain thing in html
+        fetch("file:///Users/nalindalal/Downloads/Cohort_2/Cohort_Code/week_4/2.html?a="+a+"&b="+b)
+            .then(function(response){
+                console.log(response);
+                response.text()
+                    .then(function(ans){
+                        console.log(ans);
+                        document.getElementById("finalSum").innerHTML=ans;
+                    })
+            });
+    }
+    </script>
+    <body>
+        <!---- Real time DOM -->
+        <input type="text" placeholder="First Number"><br><br>
+        <input type="text" placeholder="Second Number"><br><br>
+        <button onclick="populateDiv()">Calculate Sum</button><br><br>
+        <div id="finalSum"></div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <!--
+    //  Create a html page which calculates the simple interest along with final amount
+    //  de-bouncing-don't send request immediately,send request at breaks
+    //throttling
+    -->
+
+    <script>
+        let timeout;
+        function debouncePopulateDiv(){
+            // delay call to populateDiv until I've not been called for 100ms
+            // and I've called atleast once
+            clearTimeout(timeout);
+            timeout=setTimeout(function(){
+                populateDiv()
+            },1000)  //clear any pre existing timeout,then start new function with specified duration
+        }
+        function populateDiv(){
+            //debouncing, throtlling
+            const a=document.getElementById("firstNumber").value;
+            const b=document.getElementById("secondNumber").value;
+            // axios
+            fetch("file:///Users/nalindalal/Downloads/Cohort_2/Cohort_Code/week_4/2.html?a="+a+"&b="+b)
+            .then(function(response){
+                response.text()
+                    .then(function(ans){
+                        document.getElementById("finalSum").innerHTML=ans;
+                    })
+            });
+        }
+    </script>
+
+    <body>
+        <input oninput="debouncePopulateDiv()" id="firstNumber" type="text" placeholder="First Number">
+        <br>
+        <br>
+        <input oninput="debouncePopulateDiv()" id="secondNumber" type="text" placeholder="Second Number">
+    </body>
+</html>
+<!--
+    Create a clock and call clearTimeout() then whatever is ID, the clock stops right there
+    clock is created but immediately is stopped too
+-->
