@@ -28,6 +28,11 @@ u know to store the stuff too
 from 7.js or whatever,we did that part to successfully,with it's own documentation
 7,8,9.js
 
+## Problems:
+Data stored in memory-> Static,Lost when server is restart
+                     -> Multiple Servers in the world
+BackEnd connection to database using Mongoose
+
 # MiddleWares
 Middlewares-function having access to request objects
 10.js
