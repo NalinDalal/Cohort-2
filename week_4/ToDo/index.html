@@ -1,0 +1,30 @@
+<html>
+    <script>
+        function addToDo(){
+            const title=document.getElementById("title").value;
+            const description=document.getElementById("description").value;
+            const originalHTML=document.getElementById("container").innerHTML;
+            // document.getElementById("container").innerHTML=originalHTML+`<div>
+            //     <div>${title}</div>
+            //     <div>${description}</div>
+            //     <button>mark as delete</button>
+            // </div>
+            // `
+            const outerDiv=document.createElement("div");
+            outerDiv.innerHTML=title;
+            document.getElementById("container").appendChild(outerDiv);         //unless called doesn't gets put into dom
+        }
+    </script>
+    <div>
+        Title
+        <input id="title" type="text" placeholder="title">
+        <br>
+        Description
+        <input id="description" type="text" placeholder="description">
+        <br>
+        <button onclick="addToDo()">Add</button>
+        <div id="container">
+            
+        </div>
+    </div>
+</html>
