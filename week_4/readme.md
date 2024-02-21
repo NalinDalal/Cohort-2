@@ -63,4 +63,4 @@ npm run dev
 after last cmd it gives a local url go to it
 opens a counter,to close it-> control+c
 
-SHit Actually Runs
+This Actually Runs
