@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <div id="buttonParent"></div>
+        <script>
+            let state={
+                count:2
+            }
+
+            function onButtonPress(){
+                state.count++;
+                buttonComponentReRender()
+            }
+
+            function buttonComponentReRender(){
+                document.getElementById("buttonParent").innerHTML="";
+                const component=buttonComponent(state.count);
+                document.getElementById("buttonParent").appendChild(component);
+            }
+
+            function buttonComponent(count){
+                const button=document.createElement("button");
+                button.innerHTML = `Counter ${count}`;
+//these are backticks not single quotes,these are at the top left of the keyboard
+                button.setAttribute("onclick",'onButtonPress()');
+                return button;
+            }
+
+            buttonComponentReRender();
+        </script>
+    </body>
+</html>
