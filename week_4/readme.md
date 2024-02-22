@@ -46,12 +46,12 @@ Given a state
 write a function that renders it accordingly
 
 ## Getting Started with React
-Navigate to required folder and give command in terminal:
+Navigate to required folder "react_1" and give command in terminal:
 npm create vite@latest
 Project Name - react_1
 Select React 
 Then JavaScript
-then navigate to the required folder
+then navigate to the required folder "src"
 and main.jsx in that project folder
 
 ### App.jsx:
@@ -64,3 +64,6 @@ after last cmd it gives a local url go to it
 opens a counter,to close it-> control+c
 
 This Actually Runs
+
+## Mongo
+Documentation Inside the Mongo Folder
