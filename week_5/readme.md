@@ -79,3 +79,19 @@ And it is actually done
 
 ## To Do Application:
 All documentation in it's own readme file
+
+src/App.jsx
+
+Start by defining simple todo state
+Then Complicated string and render one after another
+
+We can start by dumping whole(it will be dumbest way)
+
+Problem:Very Ugly
+
+Whenever rendering array-create a component given a single todo
+
+Todo compenet created
+Look at code 
+try to understand it once again
+look to make something from you side
