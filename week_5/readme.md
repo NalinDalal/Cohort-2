@@ -78,8 +78,6 @@ npm run dev-to u know run the file
 And it is actually done
 
 ## To Do Application:
-All documentation in it's own readme file
-
 src/App.jsx
 
 Start by defining simple todo state
