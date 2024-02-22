@@ -1,20 +1,18 @@
 import './App.css'
+import {useState} from "react";
 
 let state={
   count:0
 }
 
 function App() {
-  function onClickHandler(){
-    state.count++;
-    console.log(state.count);
-    console.log("clicked");
-  }
+  //const [state, setState] = useState({count:0})
+  const [count, setCount] = useState(0);
 
   return (
       <div>
         hi there
-        <button onClick={onClickHandler}>Counter {state.count}</button>
+        {/* <button onClick={onClickHandler}>Counter {state.count}</button> */}
         {/*  comments-> 
         just like html but inside {}
 
@@ -27,8 +25,21 @@ function App() {
         use hook to define state
         import {useState} from "react"
         */}
+        <CustomButton count={count} setCount={setCount}></CustomButton>
+        <CustomButton count={count+1} setCount={setCount}></CustomButton>
+        <CustomButton count={count-1} setCount={setCount}></CustomButton>
       </div>
   )
+}
+
+function CustomButton(props){
+  function onClickHandler(){
+    props.setCount(props.count++);
+  }
+
+  return <button onClick={onClickHandler}>
+    Counter {props.count}
+  </button>
 }
 
 export default App
