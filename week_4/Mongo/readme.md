@@ -15,3 +15,5 @@ Add Data in it using Insert Document,Ex:
 }
 
 Insert it,data gets inserted into the DataBase itself
+
+The type of data can be set too
