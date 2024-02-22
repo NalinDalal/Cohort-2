@@ -74,3 +74,8 @@ making it dynamic
 
 npm run build-sort of convert into html,css,js into dist folder
 npm run dev-to u know run the file
+
+And it is actually done
+
+## To Do Application:
+All documentation in it's own readme file
