@@ -65,3 +65,20 @@ testing done.
 
 go to root folder
 npm create vite@latest
+create folder name:frontend and select react with javascript
+run "npm install" for dependencies
+
+go to src/app.css,src/index.css and remove all and then run again the app.jsx
+
+fresh component in new file
+frontend>src>components>CreateTodo.jsx
+added the button
+
+now to style it->
+<input style={{padding and whatever;}}>
+
+Render todos in app.jsx,write it in seprarate file-> components>Todos.jsx
+
+make a function maybe
+
+render all elements of the array in function
