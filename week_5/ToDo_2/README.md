@@ -60,4 +60,4 @@ await the function in app.post
 u know cause if there is no database call in case database is down
 to have an exception
 
-to test the app: node index.js
+to test the app: node backend/index.js
