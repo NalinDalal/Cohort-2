@@ -1,4 +1,4 @@
-// write basic express boilerplat code,
+// write basic express boilerplate code,
 // with express.json() middleware
 
 const express = require('express');
