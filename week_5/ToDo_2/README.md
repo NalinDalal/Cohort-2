@@ -61,3 +61,7 @@ u know cause if there is no database call in case database is down
 to have an exception
 
 to test the app: node backend/index.js
+testing done.
+
+go to root folder
+npm create vite@latest
