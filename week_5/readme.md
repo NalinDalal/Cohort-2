@@ -93,3 +93,7 @@ Todo compenet created
 Look at code 
 try to understand it once again
 look to make something from you side
+
+## ToDo_2 :
+it will be last class of week 5
+i really don't know will see it
