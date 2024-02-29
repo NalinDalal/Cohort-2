@@ -98,8 +98,10 @@ look to make something from you side
 it will be last class of week 5
 i really don't know will see it
 
-Assignment (29.02.2024)->
+## Assignment (29.02.2024)->
 week-5/level-1/Business/src/App.jsx,app.css
 use them and we made the fucking buisness card,we were required to use the css hence did it using raw css
+done for now
 
-move to week 6
+this is a side project->
+hey,hey this folder was made by us for the part in the projects folder
