@@ -97,3 +97,9 @@ look to make something from you side
 ## ToDo_2 :
 it will be last class of week 5
 i really don't know will see it
+
+Assignment (29.02.2024)->
+week-5/level-1/Business/src/App.jsx,app.css
+use them and we made the fucking buisness card,we were required to use the css hence did it using raw css
+
+move to week 6
