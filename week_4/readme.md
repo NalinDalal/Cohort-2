@@ -46,9 +46,9 @@ Given a state
 write a function that renders it accordingly
 
 ## Getting Started with React
-Navigate to required folder "react_1" and give command in terminal:
+Navigate to required folder "week_4" and give command in terminal:
 npm create vite@latest
-Project Name - react_1
+Project Name - react_1 (project folder)
 Select React 
 Then JavaScript
 then navigate to the required folder "src"
