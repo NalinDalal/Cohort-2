@@ -95,4 +95,38 @@ render the todos after 10sec
 
 6.1 completed
 ------------------------------------------------------------------------------------------------------------------
-### 6.2 useEffect,useMemo,useCallback
+### 6.2 useEffect,useMemo,useCallback - folder 6.2
+after folder 6.2 move to 6.2.1-useEffect
+it suggest that if id changes,re-render
+perform side effect in function component,
+sideEffect- don't affect other function, can't be done during Re-Rendering
+
+
+6.2.2 folder- useMemo timing
+means remembering some output given an input and not computing it again
+
+6.2.3 folder- useCallback
+means cache a function definition b/w re-rendering
+
+6.2.4 - Custom Hooks
+make your own hooks
+------------------------------------------------------------------------------------------------------------------
+
+### 6.3- react
+Reconciliation
+process of taking current state, finding div from existing state,
+Reconciling what DOM should look like, putting things on dom
+
+Can you do DOM manipulation yourself - Yes
+Should you do it yourself - No
+Is it good for you to delegate the heavy task of calculating the DOM changes to React - Yes
+What do you give to React - The state
+How often does react re-render - Any time state changes 
+Does React have tricks to make calculations faster - Yes
+
+new react app- react-app-test in week_6>6.3 folder
+react is a framework
+reactdom is used to write website,reactNative can be used to write mobile app
+------------------------------------------------------------------------------------------------------------------
+
+### 6.4-Assignment
