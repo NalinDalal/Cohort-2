@@ -63,6 +63,7 @@ to have an exception
 to test the app: node backend/index.js
 testing done.
 
+## frontend:
 go to root folder
 npm create vite@latest
 create folder name:frontend and select react with javascript

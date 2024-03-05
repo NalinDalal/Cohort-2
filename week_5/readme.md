@@ -62,6 +62,7 @@ A function take props/state as input and return back html is Component
 ## counter.html
 It uses the concept of State and Component with javascript to make a counter 
 
+## counter-app
 The equivalent code in react is in 'counter-app'
 
 Apply same process for Project: counter-app
