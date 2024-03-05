@@ -22,7 +22,8 @@ function Todo({id}) {
         setTodos(response.data.todo);
       })
   }, [id]) //it suggest that if id changes,re-render
-
+// perform side effect in function component,
+// sideEffect- don't affect other function, can't be done during Re-Rendering
   return <div>
     Id:{id}
     <h1>
