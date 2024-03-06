@@ -1,6 +1,6 @@
-## Week 6:
+# Week 6:
 we will start with 
-### 6.1 React Hooks-all inside folder 6.1
+## 6.1 React Hooks-all inside folder 6.1
 
 Components can only have a single child- no 2 siblings can be present here
 this single child can have multiple childs and siblings b/c
@@ -95,7 +95,7 @@ render the todos after 10sec
 
 6.1 completed
 ------------------------------------------------------------------------------------------------------------------
-### 6.2 useEffect,useMemo,useCallback - folder 6.2
+## 6.2 useEffect,useMemo,useCallback - folder 6.2
 after folder 6.2 move to 6.2.1-useEffect
 it suggest that if id changes,re-render
 perform side effect in function component,
@@ -112,7 +112,7 @@ means cache a function definition b/w re-rendering
 make your own hooks
 ------------------------------------------------------------------------------------------------------------------
 
-### 6.3- react
+## 6.3- react
 Reconciliation
 process of taking current state, finding div from existing state,
 Reconciling what DOM should look like, putting things on dom
@@ -129,4 +129,38 @@ react is a framework
 reactdom is used to write website,reactNative can be used to write mobile app
 ------------------------------------------------------------------------------------------------------------------
 
-### 6.4-Assignment
+## 6.4-Assignment
+### 1-use-Memo
+Assignment1-
+okay we did the solution in assignment1 file
+assignments-master/week-6/1-use-memo/src/components/Assignment1.jsx
+now this file is included in assignments-master/week-6/1-use-memo/src/app.jsx
+
+to run an assignment file in app.jsx just comment out the included file's corresponding tag, like assignment 1
+then comment off the {/*<Assignment1 />*/} tag
+
+Assignment2-
+goal is too find a specific word using search bar from given data
+hence render the whole using filter and useMemo
+
+Assignment3-
+all logic in for loop,keep totalValue as variable,hence use let, now this one is commented out
+we will use useMemo
+now try the same using "reducer"
+
+### 2-use-callback
+Assignment1-
+Count increment and decrement,button click calls a function having been already defined the logic
+useCallback used so that no re-rendering happens
+
+Assignment2-
+Input box,type something,onclick the button show the text as alert
+
+### 3-use-ref
+Assignment1-
+Create a component with a text input field and a button. When the component mounts or the button is clicked, automatically focus the text input field using useRef.
+
+Assignment2-
+Create a component that tracks and displays the number of times it has been rendered. Use useRef to create a variable that persists across renders without causing additional renders when it changes.
+
+Assugnments Done
