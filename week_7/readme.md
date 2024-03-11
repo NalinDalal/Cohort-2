@@ -44,11 +44,15 @@ Suspense API,asynchronour component fetching,asynchronous data fetching
 
 ## PropDrilling
 move to folder 7.1_2
-will see more
+c1 to c2; c2 to it's children c3,c4
+will see more-ugly way to send down props down the component change
+but c2 doesn't need it
 create 3 component-App,count,Buttons
 define state variable,render both variable-Count,Buttons
 
 ## ContextAPI
+introduced to solve prop drilling problem
+folder 7.1_final
 Solved by ContextAPI
 we're actually pushing your state management outside the code react components
 
@@ -64,3 +68,61 @@ context.jsx contextApi1/src/App.jsx
 
 ------------------------------------------------------------------------------------------------------------------------------------
 # 7.2|Context,State Management,Recoil
+folder 7.2
+
+3 things to do if using context:
+Define the context
+provide throughout component chain
+to use it use 'useContext' hook,makes it prettier
+
+So basically, we had ugly way to have it passed down in hierarchy,but if any preceeding memeber don't wanna use it,so we introduced Context. It directly passes down the prop
+
+sub_folder week-7-master
+Recoil State Managament Library-component in diff folder,state in another
+ReCoil-State management library for React
+
+Recoil has a concept of an atom to store the state
+An atom can be defined outside the component
+Can be teleported to any component
+
+creating an Atom
+
+Now same as previous c1,child c2,grand child c3,c4
+define atom c0 in some other place ,give default value
+can use it in c3,c4;hence only c3,c4 gets re-rendered
+
+made a new project by name-"my_folder"
+run-npm install recoil
+so I basically copied code from master repo to my_folder repo
+
+### Things to learn -
+RecoilRoot
+atom
+useRecoilState
+useRecoilValue
+useSetRecoilState
+selector
+
+make in src folder
+store/atoms/count.jsx
+define that atoms in count.jsx
+Make an context.jsx file with all code in src folder
+
+a/f defining count.jsx, go to App.jsx and clean it state variable,context logic
+
+like useState gave us count,setCount
+useRecoil gives us 3 hooks-useRecoilState,useRecoilValue,useSetRecoilValue
+useRecoilState gives access to all
+useRecoilValue to count
+useSetRecoilValue to setCount
+
+my_folder>src>App.jsx
+const count = useRecoilValue(countAtom);
+need only value,no updation logic,atom passed in it
+atom or recoil logic if we want it to use,wrap it inside <RecoilRoot></RecoilRoot>
+
+src/context.jsx,store/atoms/count.jsx
+
+see compare the master folder and my folder and see for all code,so that in my folder it runs
+
+create a selector in store/atoms/count.js
