@@ -12,7 +12,7 @@ Wrap app routes in browser through Application
 
 Fresh Project:
 cmd: "npm install react-router-dom"
-week_7/week-7-1
+week_7/week-7-1/src
 App.jsx, Components/Dashboard.jsx,Components/Landing,jsx
 
 In App.jsx the commented code with 1 infront of it,It was written first
@@ -126,3 +126,23 @@ src/context.jsx,store/atoms/count.jsx
 see compare the master folder and my folder and see for all code,so that in my folder it runs
 
 create a selector in store/atoms/count.js
+
+------------------------------------------------------------------------------------------------------------------------------------
+# 7.3|Assignments
+Assignments Folder under hood 7.3
+
+assign_1:Create User Profile Card Component
+install the dependencies;
+create a First.jsx file in src folder
+
+now create a component folder, with 2 folders in it:Assets(already present),UserProfileCard/UserProfileCard.jsx,UserProfileCard.css
+include the css file into jsx file
+clear App.jsx
+
+mounter UserProfileCard into App.jsx,add image into the concerned assets folder, specify the path specifically else it will render error
+
+UserProfileContainer.css to style the image, style thru .upc, then the gradient, now provide style to images, image in profile-down div
+
+now the background colour of whole site: index.css
+
+assign_2:Create a BackGround Chnager in ReactJS
