@@ -146,4 +146,4 @@ UserProfileContainer.css to style the image, style thru .upc, then the gradient,
 now the background colour of whole site: index.css
 same documentation in assign_1 individual readme file
 
-assign_2:Create a BackGround Chnager in ReactJS
+assign_2:Create a BackGround Changer in ReactJS
