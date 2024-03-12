@@ -2,9 +2,11 @@
 import {Suspense, lazy} from 'react';
 import { BrowserRouter,Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
+//1
 // import { Dashboard } from './components/Dashboard'
 // import { Landing } from './components/Landing' 
 
+//2
 const Dashboard= lazy (()=>import('./components/Dashboard'))
 const Landing = lazy(()=>import('./components/Landing'))
 
