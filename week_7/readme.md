@@ -147,3 +147,6 @@ now the background colour of whole site: index.css
 same documentation in assign_1 individual readme file
 
 assign_2:Create a BackGround Changer in ReactJS
+this too done
+
+all assignment done except otp one,document all assignments clearly and calmly
