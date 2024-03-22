@@ -16,7 +16,7 @@ now create a component folder, with 2 folders in it:Assets(already present),User
 include the css file into jsx file
 clear App.jsx
 
-mounter UserProfileCard into App.jsx,add image into the concerned assets folder, specify the path specifically else it will render error
+mount the UserProfileCard into App.jsx,add image into the concerned assets folder, specify the path specifically else it will render error
 
 UserProfileContainer.css to style the image, style thru .upc, then the gradient, now provide style to images, image in profile-down div
 

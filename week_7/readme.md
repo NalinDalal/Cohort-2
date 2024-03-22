@@ -150,3 +150,49 @@ assign_2:Create a BackGround Changer in ReactJS
 this too done
 
 all assignment done except otp one,document all assignments clearly and calmly
+
+# 7.4|ReCoil
+go to folder 7.4
+folder 1-easy-bits:
+make app.jx,index.css,app,css empty
+
+them make 6 buttons in App.jsx which will be same as linkedin top bar
+Home,Me will be as it is, but in remaining I need to render some numbers
+now we can do this the ugly way by using useState Hooks and connecting it to backend
+but we don't wanna use it
+
+create a new file atoms.js
+now we set something in the elements
+we want to use it in App.jsx - useRecoilValue
+
+Atoms and Selector Done
+
+2-async-queries
+npm create vite@latest
+
+cd 2-async-queries
+npm install
+npm install recoil
+
+npm run dev
+
+## atomFamily
+folder - atom-family
+Problem - Sometimes you need more than one atom for your use case
+Question - Create a component that takes a todo id as input, and renders the TODO
+You need to store the Todo in an atom (can't use useState)
+All the TODOs can be hardcoded as a variable
+multiple atoms defined but only specific one rendered through id
+
+atom family let's to create multiple atoms dynamically
+Returns a function that returns a writeable RecoilState atom.
+
+an atom represents a piece of state with Recoil. An atom is created and registered per <RecoilRoot> by your app. But, what if your state isn’t global? What if your state is associated with a particular instance of a control, or with a particular element? For example, maybe your app is a UI prototyping tool where the user can dynamically add elements and each element has state, such as its position. Ideally, each element would get its own atom of state. You could implement this yourself via a memoization pattern. But, Recoil provides this pattern for you with the atomFamily() utility. An Atom Family represents a collection of atoms. When you call atomFamily() it will return a function which provides the RecoilState atom based on the parameters you pass in.
+
+## selector family
+folder- selector-family
+app.jsx,atoms.ts
+Returns a function that returns a read-only RecoilValueReadOnly or writeable RecoilState selector.
+
+A selectorFamily is a powerful pattern that is similar to a selector, but allows you to pass parameters to the get and set callbacks of a selector. The selectorFamily() utility returns a function which can be called with user-defined parameters and returns a selector. Each unique parameter value will return the same memoized selector instance.
+
