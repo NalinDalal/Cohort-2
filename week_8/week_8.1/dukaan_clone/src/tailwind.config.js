@@ -18,3 +18,13 @@ export default {
   },
   plugins: [],
 }
+
+module.exports = {
+  purge: {
+    content: [
+      './src/**/*.html',
+      './src/**/*.jsx',
+    ],
+  },
+  // ...
+}
