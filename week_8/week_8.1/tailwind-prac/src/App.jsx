@@ -16,7 +16,7 @@ function App() {
       <div className='flex'>
         <div style={{backgroundColor:"red"}}>Hi in red</div>
         <div style={{backgroundColor:"yellow"}}>Hi in yellow</div>
-        <div style={{backgroundcolor:"green"}}>Inline CSS</div>
+        <div style={{backgroundColor:"green"}}>Inline CSS</div>
       </div>
       <br/>
       <br/>
