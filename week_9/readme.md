@@ -18,17 +18,13 @@ clean up the app.jsx file and write the code with //1
 note: import react specifically, other wise won't work
 
 ## LifeCycle Events
-when component get mount or unmount
-components go through a lifecycle of events: mounting, updating, and unmounting. These events are triggered when a component is created, updated, or destroyed.
+when component get mount or unmount, they go through a lifecycle of events: mounting, updating, and unmounting. These events are triggered when a component is created, updated, or destroyed.
 
 # Custom Hooks
 Hooks that you create yourself, so other people can use them are called custom hooks.
 
-Custom Hooks in React are user-defined f
-unctions that encapsulate reusable logic and
-stateful behavior. They allow developers to extract and share common functionality across
-multiple components, promoting code reusability and maintaining cleaner and more modular
-code.
+Custom Hooks in React are user-defined functions that encapsulate reusable logic and stateful behavior. 
+They allow developers to extract and share common functionality across multiple components, promoting code reusability and maintaining cleaner and more modular code.
 
 A custom hook is effectively a function, but with the following properties -
 1. Uses another hook internally (useState, useEffect, another custom hook)
@@ -54,9 +50,9 @@ documentation in App.jsx as there were 3 variation itself
 
 ## Browser functionality related Hooks
 1. useIsOnline hook
-Create a hook that returns true or false based on weather the user is currently online
+Create a hook that returns true or false based on whether the user is currently online
 You are given that -
-    1. window.navigator.onLine returns true or false based on weathel the user is online
+    1. window.navigator.onLine returns true or false based on weather the user is online
     2. You can attach the following event listeners to listen to weather the user is online or not
         ```jsx 
         window.addEventListener('online', () => console. log('Became online')); 
@@ -69,9 +65,7 @@ Effect Hook: The useEffect hook is used to add event listeners for the 'online' 
 accordingly.
 Event Listeners: Two event listeners, handleOnline and handleOffline , are defined to
 update the isOnline state based on the user's online or offline status.
-Cleanup: The useEffect hook also returns a cleanup f
-unction. This f
-unction removes the
+Cleanup: The useEffect hook also returns a cleanup function. This function removes the
 event listeners when the component is unmounted, preventing memory leaks.
 
 ## MousePointer inside mouse-pointer app, current width and height
@@ -142,8 +136,7 @@ Loosely Typed
     3.Low learning curve
 
 People realised that javascript is a very power language, but lacks types.
-Typescript was introduced as a new language to add
-types on top of javascript.
+Typescript was introduced as a new language to add types on top of javascript.
 Strict syntactical superset of javascript, optional static typing to language.
 
 ### Running of TypeScript:
