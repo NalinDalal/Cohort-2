@@ -11,4 +11,4 @@ then
 then a 
 ## simple server made in http-server and express_class folders
 
-Week 2 Over, will move to week 3 headache(b/c of databases)
+Week 2 Over, will move to week 3(databases)
