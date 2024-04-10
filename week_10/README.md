@@ -132,13 +132,15 @@ User and Todos: [
   }
 ]
 ```
+--------------------------------------------------------------------------------------------------------------------------------
 # Database - Prisma 1
 Problems:
 1. You have to write raw sql queries- encapsulate the sql query in simple functions
 2. Migrations are hard
 3. You dont get the best types
 Solution - ORMs
---------------------------------------------------------------------------
+
+
 Lets build a project from scratch
 Big thing to note - You need full access of Postgres for the to work
 You can
@@ -232,7 +234,8 @@ we have only concern of schema.prisma file
 tsconfig.json, Modules>uncomment rootDir
 
 hello-prisma/src/create-user.ts ->tsc
-
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
 # Database - PostGres 2
 MongoDB is Schemaless, bootstrap project fast
 but not for long term,if backend has bug, can compromise database
@@ -530,3 +533,112 @@ SELECT users.username, addresses.city, addresses.country, addresses.street, addr
 FROM users
 FULL JOIN addresses ON users.id = addresses.user_id;
 ```
+
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+
+# DataBase - Prisma 2
+``` bash
+mkdir Prisma2
+```
+
+# ORM-
+ORM stands for Object-Relational Mapping, a programming technique used in software development to convert data between incompatible type systems in object-oriented programming languages.
+easily interact with your database without worrying too much about the underlying syntax (SQL language for eg)
+
+## Why ORM
+converts objects to SQL queries under the hood
+Abstraction that lets you flip the database you are using. Unified API irrespective of the DB
+Type safety/Auto completion
+Automatic migrations- hard to keep track of all the commands;As your app grows, you will have a lot of these CREATE  and ALTER  commands.;ORMs (or more specifically Prisma) maintains all of these for you.
+
+``` sql
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+ALTER TABLE users
+ADD COLUMN phone_number VARCHAR(15);
+```
+
+## Prisma
+Prisma unlocks a new level of developer experience when working with databases thanks to its intuitive data model, automated migrations type-safety & auto-completion.
+
+Installation
+Let’s create a simple TODO app
+ 
+Initialize an empty Node.js project
+``` bash
+npm init -y
+```
+
+Add dependencies
+```bash 
+npm install prisma typescript ts-node @types/node --save-dev
+```
+
+Initialize typescript
+``` bash
+npx tsc --init
+```
+
+Change `rootDit` to `src`
+Change `outDir` to `dist`
+Initialize a fresh prisma project
+```bash
+npx prisma init
+```
+create a schema.prisma file
+copy the connection string from neon.db into the url section
+Prisma lets to choose the database
+define the model with comment model-> a User and ToDo table created
+
+Run the migration files:
+``` bash
+npx prisma migrate dev --name Initialize the schema
+```
+provide it a name: 
+```bash 
+npx prisma migrate dev —-name UserAndTodoAdded
+```
+allow migration,yup it works
+
+
+If you have psql , try to explore the tables that prisma  created for you.
+``` bash
+psql -h localhost -d postgres -U postgres
+```
+
+### Auto Generated Clients:
+Prisma auto create few files based on 'schema.prisma' file
+``` bash
+npx prisma generate
+```
+
+Fucking Application Logic now->
+src/index.ts
+compile the typescript file
+call the javascript file,will get a database
+
+insert commented with 1,then the logic of update with 2, then get user details
+
+orm provides auto-generated client than sql
+
+## Relationships
+Prisma let’s you define relationships  to relate tables with each other.
+1. Types of relationships
+One to One
+One to Many
+Many to One
+Many to Many
+
+
+# Assignment for this week
+Try creating a todo application that let’s a user signup, put todos and fetch todos. 
+Use 
+Typescript as the language
+Prisma as the ORM
+Postgres as the database
+Zod as validation library
