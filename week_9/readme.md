@@ -44,7 +44,9 @@ Data fetching hooks can be used to encapsulate all the logic to fetch data from 
 
 npm create vite@latest
 ✔ Project name: … axios
+
 ✔ Select a framework: › React
+
 ✔ Select a variant: › JavaScript
 
 
@@ -84,8 +86,11 @@ The Custom React Hook — useInterval facilitates running a callback function at
 
  npm create vite@latest
 ✔ Project name: … performance
+
 ✔ Select a framework: › React
+
 ✔ Select a variant: › JavaScript
+
 Explanation:
 The App component utilizes the useInterval hook to increment the count state value
 every second.
@@ -101,8 +106,7 @@ Create a hook that debounces a value given
 
 The Custom React Hook — useDebounce is utilized in a SearchBar component to debounce
 the user input, making it ideal for scenarios such as live search functionality. Below is a detailed explanation:
-1. useDebounce Hook:
-Explanation:
+
 Function Signature: The useDebounce hook takes two parameters - value (the input
 value to be debounced) and delay (the debounce delay in milliseconds).
 State: The debouncedValue state holds the debounced value.
@@ -115,7 +119,9 @@ the effect is re-run when they change.
 
 npm create vite@latest
 ✔ Project name: … performance_2
+
 ✔ Select a framework: › React
+
 ✔ Select a variant: › JavaScript
 
 3. useDeferred value-to get deferred value, deferred value will lag behind latest value
@@ -236,12 +242,13 @@ interface.ts file
 ### React Project with TypeScript
 npm create vite@latest
 ✔ Project name: … ts-react
+
 ✔ Select a framework: › React
+
 ✔ Select a variant: › TypeScript
 
 interface can be implemented as class but types can't
-You can use interfaces to aggregate data
-You can use interfaces to implement classes from
+You can use interfaces to aggregate data, implement classes from
 
 ## Types
 9.2/ts-react/src/types.ts
