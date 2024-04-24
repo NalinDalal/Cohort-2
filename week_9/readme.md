@@ -8,9 +8,13 @@ To create a custom hook, you simply define a function that uses one or more buil
 Using custom hooks can greatly simplify your code and make it more maintainable. They allow you to extract common logic into reusable functions, reducing duplication and improving code organization.
 
 Initialise a project-
+
  npm create vite@latest
+
 ✔ Project name: … hooks-prac
+
 ✔ Select a framework: › React
+
 ✔ Select a variant: › JavaScript
 
 clean the app.css,index.css file
