@@ -154,8 +154,8 @@ set up the repo thru: https://www.prisma.io/docs/getting-started/quickstart
 1. Create TypeScript project and set up Prisma ORM
 As a first step, create a project directory and navigate into it:
 ``` bash
-mkdir hello-prisma 
-cd hello-prisma 
+mkdir hello-prisma-1 
+cd hello-prisma-1 
 ```
 Next, initialize a TypeScript project using npm:
 ``` bash
@@ -233,7 +233,7 @@ we have only concern of schema.prisma file
 
 tsconfig.json, Modules>uncomment rootDir
 
-hello-prisma/src/create-user.ts ->tsc
+hello-prisma-1/src/create-user.ts ->tsc
 --------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------
 # Database - PostGres 2
@@ -606,7 +606,7 @@ npx prisma migrate dev —-name UserAndTodoAdded
 allow migration,yup it works
 
 
-If you have psql , try to explore the tables that prisma  created for you.
+If you have psql, try to explore the tables that prisma  created for you.
 ``` bash
 psql -h localhost -d postgres -U postgres
 ```
@@ -636,6 +636,11 @@ Many to Many
 
 
 # Assignment for this week
+Assignments/week-10
+1st one done along with comments
+
+
+then after that
 Try creating a todo application that let’s a user signup, put todos and fetch todos. 
 Use 
 Typescript as the language

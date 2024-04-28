@@ -19,3 +19,4 @@ async function getUserAndTodosWithJoin(userId: number) {
 }
 
 getUserAndTodosWithJoin(1)
+getUserAndTodosWithJoin(5)
