@@ -7,6 +7,7 @@ Just write code,someone else takes care of the deployment
 Serverless BackEnd- "Serverless" is a backend deployment in which the cloud provider dynamically manages the allocation and provisioning of servers. The term "serverless" doesn't mean there are no servers involved. Instead, it means that developers and operators do not have to worry about the servers.
 
 What if you could just write your express routes and run a command. The app would automatically
+
 1. Deploy
 2. Autoscale
 3. Charge you on a per request, basis (rather than you paying for VMs)
@@ -21,8 +22,8 @@ https://firebase.google.com/docs/functions
 Cloudflare Workers
 https://workers.cloudflare.com/
 
+---
 
-------------------------------------------------------------------
 ## When should you use a serverless architecture?
 
 When you have to get off the ground fast and don’t want to worry about deployments
@@ -43,18 +44,23 @@ yup works,runs similarly to node.js
 deployed a todoapp-> https://worker-morning-cloud-e73a-todoapp.nalindalal2004.workers.dev/
 
 # Localised App
-``` bash
+
+```bash
 npm create cloudflare -- my-app
 ```
+
 y to proceed, then type of app-> hello world worker, select typescript, select no for now for deployment
 
 go to directory,run->
+
 ```bash
 npm run dev
 ```
+
 select no for now, go to mentioned url, note the function can only have one return type
 
 deployment on internet,login into your account though terminal
+
 ```bash
 npx wrangler login
 ```
@@ -62,95 +68,109 @@ npx wrangler login
 opens a url in browser,allow from there, access given
 
 now to deploy it
+
 ```bash
 npm run deploy
 ```
 
 package.json contains all details,can change the name too
 
-we can register the domain in domain registration in user dashboard
-------------------------------------------------------------------
+## we can register the domain in domain registration in user dashboard
+
 # Using Hono
+
 wanted to create a web application on Cloudflare Workers. But, there was no good framework that works on Cloudflare Workers, so I started building Hono and thought it would be a good opportunity to learn how to build a router using Trie tree
 
-Working with cloudflare workers - 
- 
+Working with cloudflare workers -
+
 Initialize a new app
+
 ```bash
 npm create hono@latest my-app1
 ```
+
 select cloudflare-workers
 
 Move to my-app and install the dependencies.
+
 ```bash
 cd my-app1
 npm i
 ```
- 
+
 1. Hello World
+
 ```js
-import { Hono } from 'hono'
-const app = new Hono()
+import { Hono } from "hono";
+const app = new Hono();
 
-app.get('/', (c) => c.text('Hello Cloudflare Workers!'))
+app.get("/", (c) => c.text("Hello Cloudflare Workers!"));
 
-export default app
+export default app;
 ```
 
 ## Getting inputs from user
+
 index.ts ->
+
 ```js
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+const app = new Hono();
 
-app.post('/', async (c) => {
-  const body = await c.req.json()
+app.post("/", async (c) => {
+  const body = await c.req.json();
   console.log(body);
   console.log(c.req.header("Authorization"));
   console.log(c.req.query("param"));
 
-  return c.text('Hello Hono!')
-})
+  return c.text("Hello Hono!");
+});
 
-export default app
+export default app;
 ```
 
-## Deploying 
+## Deploying
+
 Make sure you’re logged into cloudflare (wrangler login)
+
 ```bash
 npm run deploy
 ```
 
 auth middleware into my-app1->
-```ts
-import { Hono, Next } from 'hono'
-import { Context } from 'hono/jsx';
 
-const app = new Hono()
+```ts
+import { Hono, Next } from "hono";
+import { Context } from "hono/jsx";
+
+const app = new Hono();
 
 app.use(async (c, next) => {
   if (c.req.header("Authorization")) {
     // Do validation
-    await next()
+    await next();
   } else {
     return c.text("You dont have acces");
   }
-})
+});
 
-app.get('/', async (c) => {
-  const body = await c.req.parseBody()
+app.get("/", async (c) => {
+  const body = await c.req.parseBody();
   console.log(body);
   console.log(c.req.header("Authorization"));
   console.log(c.req.query("param"));
 
-  return c.json({msg: "as"})
-})
+  return c.json({ msg: "as" });
+});
 
-export default app
+export default app;
 ```
-------------------------------------------------------------------
+
+---
+
 # Amazon Web Services(AWS)
+
 Sign Up with email id
 
 VMs on AWS are called EC2 Servers
@@ -160,6 +180,7 @@ Compute - It is a machine
 You can spin up a new EC2 instance from the aws dashboard
 
 ## Creating Own Instance
+
 Launch a Instance,give it a name
 select any server
 
@@ -168,53 +189,62 @@ KeyPair Login-> to connect with the cloud server
 must create one,give it a name and create one
 should be kept private,must not be shared
 
-
 create a application,check all things,select no of instance as 1,
 launch of instance,can edit instances thru inbound rules
 
 ## SSH into Server
+
 1. Give ssh key permissions,ssh into a machine
+
 ```bash
 chmod 700 kirat-class.pem
 ```
 
 2. ssh into machine
+
 ```bash
 ssh -i kirat-class.pem ubuntu@ec2-65-0-180-32.ap-south-1.compute.amazonaws.com
 ```
 
 3. Clone repo
+
 ```bash
 git clone https://github.com/hkirat/sum-server
 ```
+
 If your aws machine shows you the following error, your aws machine doesn’t have access to the internet
 Solution - https://www.tecmint.com/resolve-temporary-failure-in-name-resolution/
 
-
 4. Install Node.js
-https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+   https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
 
 5. Install all dependencies
+
 ```bash
 cd sum-server
 npm install
 ```
 
 6. Start backend
+
 ```bash
 node index.js
 ```
 
-##  - Install the repo
+## - Install the repo
+
 Clone the repo
+
 ```bash
 https://github.com/hkirat/sum-server
 ```
+
 can get the domain name,ip of site from aws
 
 7. Try hitting the server
-You have an ip/DNS that you can hit to access your ec2 server
-Try visiting the backend
+   You have an ip/DNS that you can hit to access your ec2 server
+   Try visiting the backend
+
 ```bash
 your_domain:3000
 ```
@@ -228,6 +258,7 @@ very ugly to provide the site
 to purchase domain-> https://domains.squarespace.com/
 
 ## nginx
+
 https://www.nginx.com/resources/glossary/nginx/
 NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability. In addition to its HTTP server capabilities, NGINX can also function as a proxy server for email (IMAP, POP3, and SMTP) and a reverse proxy and load balancer for HTTP, TCP, and UDP servers.
 
@@ -237,6 +268,7 @@ be1 hits on 8081
 be2 on 8082
 
 Installing nginx
+
 ```bash
 sudo apt update
 sudo apt install nginx
@@ -245,8 +277,7 @@ sudo apt install nginx
 This should start a nginx server on port 80
 Try visiting the website
 
-
- now adding the domain->
+now adding the domain->
 copy the ip of ec2 machine
 go to domain provider(like godaddy,domain.google)
 go to dns(domain name system)
@@ -254,6 +285,7 @@ select name,selet 'A' as the type, paste the ip,
 save the instance
 
 ## Create reverse proxy
+
 ```bash
 sudo rm sudo vi /etc/nginx/nginx.conf
 sudo vi /etc/nginx/nginx.conf
@@ -282,11 +314,13 @@ http {
 ```
 
 restart the config->
+
 ```bash
 sudo nginx -s reload
 ```
- 
+
 Start the Backend server
+
 ```bash
 node index.js
 ```
@@ -294,5 +328,121 @@ node index.js
 Visit the website
 https://be1.100xdevs.com/
 
---------------------------------------------------------------------------------------------------------------------------------
+---
+
 # Certificate Management
+
+The app needs to have a certificate such that it is deployed on 'https'
+we will try on digitalocean-> "cert-man"
+
+deploying the backend
+create an instance from the aws,ec1
+launch instance,give a name
+select any machine,choose ubuntu machine
+select smallest instance,free tier eligible
+t2.micro
+
+creating a key-pair,rsa,.pem,give a name,downloads the file(keep it safe)
+check all checkbox for traffics(http,https),etc since we need to have traffic
+
+since we are a new guy they don't allow for more deployments
+instance state should be running,hence can see in instances
+can also access ip,domain from instances
+
+## ssh into server
+
+[name].cer-> name of key pair file
+wherever u kept the certificate file go to that folder,run following commands to ssh into the machine:
+
+```bash
+chmod 700 [name].cer
+```
+
+```bash
+ssh -i [name].cer ubuntu@[dns_machine]
+```
+
+launches a new machine which is remotely accessed
+
+clone the repo onto this one machine,
+
+install node.js
+
+start the backend
+
+to add rules->
+instance>security>edit inbound rule,save
+ec2_url:8080/todos
+
+## must be secure,beautiful->
+
+reverse proxy,has aim to host multiple process on same machine
+
+protocol default port
+http-> 8080
+https-> 443
+
+# nginx
+
+```bash
+sudo apt update
+sudo apt install nginx
+```
+
+# Create reverse proxy
+
+```bash
+sudo rm sudo vi /etc/nginx/nginx.conf
+sudo vi /etc/nginx/nginx.conf
+```
+
+opens a .conf file->
+
+```conf
+events {
+    # Event directives...
+    }
+http {
+    server {
+        listen 80;
+        server_name [domain_name];
+
+        location / {
+            proxy-pass http://localhost:8080;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+    }
+    }
+｝
+```
+
+restart the nginx process
+
+```bash
+sudo nginx -s reload
+```
+
+go to google domains/dns-> select the server from the conf file,select A certificate,now ip address
+ip address of aws machine,save
+
+go to server, type
+
+```bash
+ping [domain_name]
+```
+
+# Certificates-> connection is secured
+
+Let's Encrypt provides this certificates for free
+go to certbot[ https://certbot.eff.org/ ]
+do the things by following the steps on the 'ubuntu machine'
+
+use pm2, will run always in background, so that even if you leave the server, website runs in background
+
+```bash
+pm2 start index.js
+```
+
