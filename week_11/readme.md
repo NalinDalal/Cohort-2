@@ -445,4 +445,3 @@ use pm2, will run always in background, so that even if you leave the server, we
 ```bash
 pm2 start index.js
 ```
-

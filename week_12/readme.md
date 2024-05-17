@@ -235,7 +235,7 @@ go to zod.ts
 
 # 12.3 | Docker
 
-we already have notes make use of them, by the name of "12.3|Docker"
+we already have notes make use of them with more in week 15 supposedly
 
 # 12.4 | SQL Relationships
 
@@ -395,3 +395,20 @@ npm run dev
 ```
 
 1:27:18
+create a ui folder in packages and
+install mui in turbo repo, inside packages/ui
+
+```bash
+ npm i @mui/material @emotion/eact @emotion/styled
+```
+
+signup.tsx in ui.export this from index.tsx .
+then go to app>web>app>page.tsx and add signup.tsx in it
+
+do the things,then run it through web folder->
+
+```bash
+yarn dev
+```
+
+yeah done!!
