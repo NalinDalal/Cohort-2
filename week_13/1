@@ -451,7 +451,7 @@ tsconfig.json->
 
 ```json
 {
-  "name": "@100xdevs/common-app",
+  "name": "@nalindalal/medium-common",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -461,6 +461,10 @@ tsconfig.json->
   "keywords": [],
   "author": "",
   "license": "ISC"
+"description": "",
+  "dependencies": {
+    "zod": "^3.23.8"
+  }"
 }
 ```
 
@@ -491,3 +495,5 @@ npm publish --access public
 ```
 
 Explore your package on npmjs
+
+## FrontEnd
