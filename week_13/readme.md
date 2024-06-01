@@ -536,3 +536,12 @@ add routing to the App.tsx file as signup,signin,blog
 then regarding Quote it suggest that in right half their's a Quote ; above md visible but ideally invisible
 
 same way the auth page
+
+
+
+imp credentials
+```md 
+postgres://avnadmin:AVNS_70RKF80OUVee9wYAozi@pg-3022e223-nalindalal2004-c2ec.l.aivencloud.com:28990/defaultdb?sslmode=require
+
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZWY0OGU4YTMtNzRhZC00MmVlLTgyNmUtZWZmMDExZjBkMTQ1IiwidGVuYW50X2lkIjoiYmNjZjJhN2JjNmVhZGY2MmI4OTA0Y2E3MmUxMjY1OGJmYzkyOGIzOWVlMGZmN2M1OTFjZjRlYWZkMDdiNjk2OCIsImludGVybmFsX3NlY3JldCI6ImQ0ZjM3MmUyLWVmYzItNDI5NS05M2E5LTE1ZTM5ZTdlNGE2ZiJ9.t-7aLAGMzWDj3IYWqqjDPEf9vZE2VbYDb8V5f0oOxqY"
+```
