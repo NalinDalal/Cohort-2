@@ -242,4 +242,44 @@ It supports various providers
 
 ```bash
 npx create-next-app@latest
+✔ What is your project named? … 16.4-next-auth
+
 ```
+
+Catch all routes
+If you want to add a single route handler for
+/api/auth/user
+/api/auth/random
+/api/auth/123
+/api/auth/...
+
+You can create a catch all route
+
+Create app/api/auth/[...nextauth]/route.ts
+add some code, go to few endpoint, /api/auth/[anything] gives some output.
+
+to get dynamic routrs on the page, use get method on route page, gets logged into the terminal, loggin the subroute
+
+runs correctly
+
+now to utilise next-auth comment the previous code with header //1
+
+```bash
+npm install next-auth
+```
+
+so we provide a array for next-auth providers, into same file
+
+do the routing, in env file provide the website for your own file,
+
+done, better approach move your auth logic into another file
+
+for google provider, call library, add it into providers, and make sure to have some cred for authentication
+create creds on -> `https://console.developers.google.com/apis/credentials`
+create credentials(in sidebar)>api and services>, consent screen, authorised redirect uri,
+create , copy over client id and client secret, put into .env file
+now go to auth.ts, and add the google provider there
+
+same for github
+
+week16 done
