@@ -144,3 +144,5 @@ npm run dev
 8. npm run dev
 
 `npx prisma studio` - to visualise the tables
+
+remaining in week 18
