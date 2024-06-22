@@ -32,3 +32,22 @@ Let’s implement this feature via a server action
   now go to `apps/bank-webhook` -> run `npm run dev`
   18.1.1 done
 
+Add a p2p transfer column-> user-app/app/(dashboard)/layout.tsx, user-app/components/SendCard.tsx
+
+Create a new action in lib/actions/p2pTransfer.tsx and add it in SendCard.tsx
+
+Problem with this approch.
+Try simulating two request together by adding a 4s sleep timeout in the transaction
+
+## Locking of rows
+
+In postgres, a transaction ensure that either all the statements happen or none. It does not lock rows/ revert a transaction if something from this transaction got updated before the transaction committed (unlike MongoDB)
+So we need to explicitly lock the balance row for the sending user so that only one transaction can access it at at time, and the other one waits until the first transaction has committed
+
+## Add P2P transactions table
+
+Update schema.prisma
+Run `npx prisma migrate dev --name added_p2p_txn`
+Regenerate client `npx prisma generate`
+Do a global build (npm run build) (it’s fine if it fails
+Add entries to `p2pTransfer` whenever a transfer happens
