@@ -1,4 +1,4 @@
-import { useState, ChangeEventHandler } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signupInput } from "@nalindalal/medium-common";
 import axios from "axios";
@@ -7,7 +7,7 @@ import { BACKEND_URL } from "../config";
 //imports from common will be introduced here
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   const navigate = useNavigate();
-  const [postInputs, setPostInputs] = useState<SignupInput>({
+  const [postInputs, setPostInputs] = useState<typeof signupInput>({
     name: "",
     username: "",
     password: "",
