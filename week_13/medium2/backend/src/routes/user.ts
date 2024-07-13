@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { sign } from "hono/jwt";
-import { signupInput, signinInput } from "@100xdevs/medium-common";
+import { signupInput, signinInput } from "@nalindalal/medium-common";
 
 export const userRouter = new Hono<{
   Bindings: {
@@ -27,7 +27,8 @@ userRouter.post("/signup", async (c) => {
   try {
     const user = await prisma.user.create({
       data: {
-        username: body.username,
+        //username: body.username,
+        email: body.email,
         password: body.password,
         name: body.name,
       },
@@ -64,7 +65,8 @@ userRouter.post("/signin", async (c) => {
   try {
     const user = await prisma.user.findFirst({
       where: {
-        username: body.username,
+        //username: body.username,
+        email: body.email,
         password: body.password,
       },
     });

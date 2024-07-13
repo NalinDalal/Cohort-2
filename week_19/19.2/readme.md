@@ -44,3 +44,129 @@ save 60 10000    # Save the dataset every 60 seconds if at least 10000 keys chan
 ```
 
 - AOF (Append Only File): The AOF persistence logs every write operation received by the server, appending each operation to a file. This file can then be replayed on startup to reconstruct the dataset.
+
+# Starting Redis Locally
+
+Let’s start redis locally and start using it as a DB
+
+```bash
+docker run --name my-redis -d -p 6379:6379 redis
+```
+
+Connecting to your container
+
+```bash
+docker exec -it container_id /bin/bash
+```
+
+Connecting to the redis cli
+
+```bash
+redis-cli
+```
+
+# Redis as a DB
+
+## SET/GET/DEL
+
+- Setting data
+
+  ```bash
+  SET mykey "Hello"
+  ```
+
+- Getting data
+
+  ```bash
+  GET mykey
+  ```
+
+- Deleting data
+  ```bash
+  DEL mykey
+  ```
+
+## HSET/HGET/HDEL (H = Hash)
+
+```redis-cli
+HSET user:100 name "John Doe" email "user@example.com" age "30"
+HGET user:100 name
+HGET user:100 email
+```
+
+# Redis as a queue
+
+You can also push to a topic / queue on Redis and other processes can pop from it.
+Good example of this is Leetcode submissions that need to be processed asynchronously
+
+## Pushing to Queue
+
+```redis
+LPUSH problems 1
+LPUSH problems 2
+```
+
+## Poping from Queue
+
+```redis
+RPOP problems
+RPOP problems
+```
+
+## Blocked Pop
+
+```redis
+BRPOP problems 0
+BRPOP problems 30
+```
+
+The last argument represents the timeout before the blocking should be stopped.
+
+# Talking to redis via Node.js
+
+- Create an empty Node.js project
+- Initialize 2 folders inside it
+  - express-server
+  - worker
+- Initialize an empty Node.js typescript project in both of them
+
+```bash
+npm init -y
+npx tsc --init
+```
+
+- Install dependencies in `express-server`
+
+```bash
+npm i express @types/express redis
+```
+
+- Install dependencies in `worker`
+
+```bash
+npm i redis
+```
+
+- Create `index.ts` in both `express-server`, `worker`
+  code them and then run them
+
+worker->
+
+```bash
+tsc -b
+node dist/index.js
+```
+
+express-server->
+
+```bash
+tsc -b
+node dist/index.js
+```
+
+week 19 done
+
+# Assignment
+
+Create a websocket server that lets users connect and accepts one message from a user which tells the websocket server the users id (no auth)
+Make the websocket server subscribe to the pub sub and emit back events to the relevant user

@@ -78,7 +78,7 @@ function App() {
       <!-- This will center text on mobile, and left align it on screens 640px and wider -->
       <div class="text-center sm:text-left"></div>
       */}
-      <div class="bg-red-500 md:bg-blue-500">
+      <div className="bg-red-500 md:bg-blue-500">
         {/* by default red, above md point becomes blue*/}
         42:00
         <div>Hi there2</div>
