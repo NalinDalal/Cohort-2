@@ -1,0 +1,12 @@
+{
+  "name": "2-pubsub",
+  "version": "1.0.0",
+  "description": "Stateful vs Stateless Backends State management in a Backned app Singleton Pattern Pub Subs + Singleton pattern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
