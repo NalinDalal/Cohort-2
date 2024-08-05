@@ -1,0 +1,22 @@
+{
+  "name": "2-express-app",
+  "version": "1.0.0",
+  "description": "Let’s say we have an express app that doesnt have any DB connections",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/express": "^4.17.21",
+    "ts-jest": "^29.2.4"
+  },
+  "dependencies": {
+    "@types/supertest": "^6.0.2",
+    "express": "^4.19.2",
+    "supertest": "^7.0.0"
+  }
+}

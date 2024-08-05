@@ -132,3 +132,18 @@ npm install supertest --save-dev
 Add `src/tests/sum.test.ts`
 
 Run the test-> `npm run test`
+
+## beforeEach
+
+If you want to clear the DB between tests/descibe blocks, you can use the beforeEach function
+
+## beforeAll
+
+If you want certain code to run before all the tests (but not before every individual test), you can use the beforeAll function
+
+# CI/CD pipeline
+
+- Add a .env.example
+  `DATABASE_URL="postgresql://postgres:mysecretpassword@localhost:5432/postgres"`
+
+- Add `.github/workflows/test.yml`
