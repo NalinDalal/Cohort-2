@@ -11,7 +11,9 @@ Linting is the process of running a program that analyzes source code to flag pr
 ## Tools
 
 ![ESLint](https://eslint.org/)
+
 ![Prettier](https://prettier.io/)
+
 ![Husky](https://typicode.github.io/husky/)
 
 `Eslint lets you do both 1 and 2
